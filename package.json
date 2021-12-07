@@ -1,0 +1,57 @@
+{
+    "private": true,
+    "displayName": "nodeMCU platform",
+    "name": "homebridge-nodemcu-switch",
+    "version": "1.0.0",
+    "description": "Homebridge plugin for nodemcu",
+    "license": "BSD 2-Clause ",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/leexeel/LC"
+    },
+    "bugs": {
+      "url": "https://github.com/leexeel/LC/issues"
+    },
+    "engines": {
+      "node": ">=10.17.0",
+      "homebridge": ">=0.4.4"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+      "lint": "eslint src/**.ts --max-warnings=0",
+      "watch": "npm run build && npm link && nodemon",
+      "build": "rimraf ./dist && tsc",
+      "rimraf": "./node_modules/rimraf/bin.js",
+      "prepublishOnly": "npm run lint && npm run build"
+    },
+    "keywords": [
+      "homebridge-plugin",
+      "homebridge-nodemcu",
+      "homebridge-switch"
+    ],
+    "dependencies": {
+      "cache-service-cache-module": "^2.0.1",
+      "superagent": "^6.1.0",
+      "superagent-cache-plugin": "^3.0.0-beta.1"
+    },
+    "devDependencies": {
+      "@types/node": "^16.10.9",
+      "@typescript-eslint/eslint-plugin": "^5.0.0",
+      "@typescript-eslint/parser": "^5.0.0",
+      "eslint": "^8.0.1",
+      "homebridge": "^1.3.5",
+      "nodemon": "^2.0.13",
+      "rimraf": "^3.0.2",
+      "superagent": "^3.3.1",
+      "cache-service-cache-module": "^1.2.4",
+      "superagent-cache-plugin": "^1.0.0",
+      "ts-node": "^10.3.0",
+      "typescript": "^4.4.4"
+    },
+    "funding": [
+      {
+        "type": "paypal",
+        "url": "https://paypal.me/leexeel"
+      }
+    ]
+  }
